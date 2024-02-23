@@ -1,0 +1,36 @@
+
+
+.menu-box{
+    width: 100%;
+    background-color: grey;
+    padding: 10px;
+}
+
+.menu-box ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.KBH {
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    position: absolute;
+    right: 50px;
+    left: 300px;
+    bottom: 50%;
+    color: white;
+    font-size: 80px;
+}
+
+.text-box{
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    width: 40%;
+    top: 90%;
+    left: 1%;
+    font-size: 17px;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tilføj attraction</h1>
+
+<fieldset>
+    <form action="/attractions/save" method="post" th:object="${attraction}">
+        <p>
+            <label>name</label>
+            <input name="name" type="text" th:value="${attraction.name}">
+        </p>
+        <p>
+            <label>description</label>
+            <input name="name" type="text" th:value="${attraction.description}">
+        </p>
+
+        <select>
+            <option th:each="c:${cities}" th:value="${c}" th:text="${c}"></option>
+        </select>
+
+        <p>
+            <input type="checkbox" th:each="t:${getTags}" th:value="${t}" th:text="${t}">
+        </p>
+
+    </form>
+</fieldset>
+</body>
+</html>

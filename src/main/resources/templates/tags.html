@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link th:href="@{/main.css}" rel="stylesheet">
+<body>
+<table>
+    <thead>
+    <tr th:each="attraction: ${attractions}" th:if="${attraction.name eq name}">
+        <th th:text="${attraction.name}"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="attractions: ${tags}">
+        <td th:text="${attractions}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
