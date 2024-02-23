@@ -36,9 +36,9 @@ public class TouristController {
     }
 
     @PostMapping("/save")
-    public String addedAttraction(@RequestBody TouristAttraction touristAttraction, Model model) {
+    public String addedAttraction(@ModelAttribute TouristAttraction touristAttraction, Model model) {
        model.addAttribute("save",touristService.creatAttraction(touristAttraction));
-       return "attractionList";
+       return "redirect:/attractions";
     }
 
 

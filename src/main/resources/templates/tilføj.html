@@ -9,13 +9,15 @@
 
 <fieldset>
     <form action="/attractions/save" method="post" th:object="${attraction}">
+
         <p>
             <label>name</label>
             <input name="name" type="text" th:value="${attraction.name}">
         </p>
+
         <p>
             <label>description</label>
-            <input name="name" type="text" th:value="${attraction.description}">
+            <input name="description" type="text" th:value="${attraction.description}">
         </p>
 
         <select>
@@ -26,7 +28,11 @@
             <input type="checkbox" th:each="t:${getTags}" th:value="${t}" th:text="${t}">
         </p>
 
+        <input type="submit" th:value="ok">
     </form>
+    <a th:href="@{'attractions'}">
+        <input type="button" th:value="fortryd">
+    </a>
 </fieldset>
 </body>
 </html>
