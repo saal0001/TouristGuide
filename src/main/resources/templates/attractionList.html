@@ -22,6 +22,16 @@
                 <input type="button" value="tags" >
             </a>
         </td>
+        <td>
+           <a th:href="@{'attractions/'+${attraction.name}+'/edit'}">
+               <input type="button" value="update">
+           </a>
+        </td>
+        <td>
+            <a th:href="@{'attractions/delete'+${attraction.name}}">
+                <input type="button" value="delete">
+            </a>
+        </td>
     </tr>
     </tbody>
 </table>

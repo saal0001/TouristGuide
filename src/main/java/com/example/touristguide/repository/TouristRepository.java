@@ -44,13 +44,11 @@ public List<String>getAttractionByTags(String name){
     }
 
     public TouristAttraction editAttraction(TouristAttraction touristAttraction) {
-
         for (TouristAttraction findTouristattraction : touristAttractions) {
-            if (findTouristattraction.getName().equalsIgnoreCase(touristAttraction.getName())) {
-                findTouristattraction.setName(touristAttraction.getName());
+            if (findTouristattraction.getName().equals(touristAttraction.getName())) {
                 findTouristattraction.setDescription(touristAttraction.getDescription());
-                touristAttraction.setName(findTouristattraction.getName());
-                touristAttraction.setDescription(findTouristattraction.getDescription());
+                findTouristattraction.setBy(touristAttraction.getBy());
+                findTouristattraction.setTags(touristAttraction.getTags());
             }
         }
         return touristAttraction;

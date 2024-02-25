@@ -8,8 +8,15 @@ public class TouristAttraction {
     private String by;
     private List<String> tags;
 
+    public void setBy(String by) {
+        this.by = by;
+    }
 
-    public TouristAttraction (String name,String describtion,String by,List tags){
+    public void setTags(List<String> tags) {
+        this.tags = tags;
+    }
+
+    public TouristAttraction (String name, String describtion, String by, List tags){
         this.description = describtion;
         this.name = name;
         this.by=by;
